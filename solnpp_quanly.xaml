@@ -1,0 +1,53 @@
+﻿<Window x:Class="NPP__VIIRS_AOD_.solnpp_quanly"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NPP__VIIRS_AOD_"
+        mc:Ignorable="d"
+        Title="Quản lý dữ liệu sol khí từ vệ tinh NPP (VIIRS AOD)" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bgsol.jpg"/>
+        </Grid.Background>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="38,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,1.872" FontWeight="Bold" FontSize="14"/>
+        <Label Content="FileName" HorizontalAlignment="Left" Margin="38,65,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="Path" HorizontalAlignment="Left" Margin="259,25,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <Label Content="SQATime" HorizontalAlignment="Left" Margin="253,64,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Version" HorizontalAlignment="Left" Margin="521,64,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label Content="UpdateTime" HorizontalAlignment="Left" Margin="521,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="14"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="30,125,18,102" RenderTransformOrigin="0.5,0.5">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0.692"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-1.753"/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
+        <TextBox x:Name="ID_txt" HorizontalAlignment="Left" Margin="120,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="76" RenderTransformOrigin="0.962,-1.857"/>
+        <TextBox x:Name="FileName_txt" HorizontalAlignment="Left" Margin="121,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="Path_txt" HorizontalAlignment="Left" Margin="328,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+        <TextBox x:Name="SQATime_txt" HorizontalAlignment="Left" Margin="328,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+        <TextBox x:Name="UpdateTime_txt" HorizontalAlignment="Left" Margin="622,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <TextBox x:Name="Version_txt" HorizontalAlignment="Left" Margin="622,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="96"/>
+        <Button x:Name="Insertbtn" Content="Insert" HorizontalAlignment="Left" Margin="38,346,0,0" VerticalAlignment="Top" Height="59" Width="88" Click="Insertbtn_Click_1" FontWeight="Bold" FontSize="16" />
+        <Button x:Name="Deletebtn" Content="Delete" HorizontalAlignment="Left" Margin="164,346,0,0" VerticalAlignment="Top" Height="59" Width="88" Click="Deletebtn_Click_1" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="Uploadbtn" Content="Upload" HorizontalAlignment="Left" Margin="308,346,0,0" VerticalAlignment="Top" Height="59" Width="92" Click="Uploadbtn_Click_1" FontWeight="Bold" FontSize="16"/>
+        <Button x:Name="Cleardung" Content="Clear" Margin="446,346,260,0" VerticalAlignment="Top" Height="59" Click="Cleardung_Click_1" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="search1" Content="search" HorizontalAlignment="Left" Margin="582,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="59" Width="89" Click="search1_Click" FontWeight="Bold" FontSize="16">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.304"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="open1" Content="open" HorizontalAlignment="Left" Margin="698,346,0,0" VerticalAlignment="Top" Height="59" Width="92" Click="open_Click" FontWeight="Bold" FontSize="16"/>
+
+
+    </Grid>
+</Window>
